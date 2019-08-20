@@ -1,0 +1,5 @@
+.vscode
+built
+dist
+__pycache__
+interfaz.spec
