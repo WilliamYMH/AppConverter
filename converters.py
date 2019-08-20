@@ -9,11 +9,11 @@ def convertOdfToMso(file):  # convertir archivo odf a msOffice formato antiguo
 
     if(file.ruta != ''):
         if(file.extension == 'odt'):
-            shutil.copy2(file.ruta, file.directorio+file.name+'_converted.doc')
+            shutil.copy2(os.path.abspath(file.ruta), os.path.abspath(file.directorio+file.name+'_converted.doc'))
         elif(file.extension == 'odp'):
-            shutil.copy2(file.ruta, file.directorio+file.name+'_converted.ppt')
+            shutil.copy2(os.path.abspath(file.ruta), os.path.abspath(file.directorio+file.name+'_converted.ppt'))
         elif(file.extension == 'ods'):
-            shutil.copy2(file.ruta, file.directorio+file.name+'_converted.xls')
+            shutil.copy2(os.path.abspath(file.ruta), os.path.abspath(file.directorio+file.name+'_converted.xls'))
         else:
             return 'Extension de archivo no valido'
         return 'Archivo convertido satisfactoriamente'
@@ -26,11 +26,11 @@ def convertMsoToOdf(file):  # convertir archivo msofice formato antiguo a odf
 
     if(file.ruta != ''):
         if(file.extension == 'doc'):
-            shutil.copy2(file.ruta, file.directorio+file.name+'_converted.odt')
+            shutil.copy2(os.path.abspath(file.ruta), os.path.abspath(file.directorio+file.name+'_converted.odt'))
         elif(file.extension == 'ppt'):
-            shutil.copy2(file.ruta, file.directorio+file.name+'_converted.odp')
+            shutil.copy2(os.path.abspath(file.ruta), os.path.abspath(file.directorio+file.name+'_converted.odp'))
         elif(file.extension == 'xls'):
-            shutil.copy2(file.ruta, file.directorio+file.name+'_converted.ods')
+            shutil.copy2(os.path.abspath(file.ruta), os.path.abspath(file.directorio+file.name+'_converted.ods'))
         else:
             return 'Extension de archivo no valido'
         return 'Archivo convertido satisfactoriamente'
