@@ -6,6 +6,6 @@ Aplicacion que convierte archivos odf a formatos antiguos y actuales de msoffice
 ## Windows
  Consume procesos de Msoffice para su ejecucion.
 ## Linux
- Cosume procesos de LibreOffice para su ejecucion.
+ Consume procesos de LibreOffice para su ejecucion.
 
 v.0.0.1
